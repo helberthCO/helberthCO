@@ -8,7 +8,7 @@ body{
   font: {
     family: $primary_font;
     weight: 400;
-    size: 16px;
+    size: $browser-context;
   };
 }
 .btn{
