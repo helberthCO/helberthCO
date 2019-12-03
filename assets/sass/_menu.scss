@@ -6,11 +6,11 @@
     position: relative;
     top: -1px;
     font:{
-      size: .8rem;
+      size: em(14px);
       weight: 600;
     };
     color: $primary_color;
-    margin-left: 25px;
+    margin-left: 30px;
     text-transform: uppercase;
   }
   &__bars{
@@ -20,43 +20,26 @@
     bottom: 0;
     margin: auto;
     display: block;
-    width: 20px;
-    height: 2px;
+    width: 25px;
+    height: 3px;
     background: $primary_color;
+    border-radius: 2px;
     @extend %animate;
     &:before, &:after{
       @include pseudo($left:0);
-      width: 20px;
-      height: 2px;
+      width: 25px;
+      height: 3px;
       background: $primary_color;
       transform-origin: left;
       @extend %animate;
+      border-radius: 2px;
     }
     &:before{
-      bottom: 5px;
+      bottom: 7px;
     }
     &:after{
-      top: 5px;
-    }
-  }
-  &.menu-open{
-    z-index: 2;
-    &:before{
-      content: 'Close';
-      color: $white;
-    }
-    .menu__bars{
-      width: 0;
-      background: $white;
-      &:before{
-        transform: rotate(32deg);
-        background: $white;
-      }
-      &:after{
-        transform: rotate(-32deg);
-        background: $white;
-      }
-    }
+      top: 7px;
+    } 
   }
 }
 .primary-nav{
@@ -76,5 +59,44 @@
     font: {
       weight: 500;
     };
+  }
+}
+#menu{
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 1px;
+  border-color: transparent;
+}
+
+#menu:checked ~ .header__nav{
+  right: 0;
+}
+
+#menu:checked ~ .menu{
+  z-index: 99;
+  &:before{
+    content: 'Close';
+    color: $white;
+  }
+}
+
+#menu:checked ~ .menu span{
+  background: $white;
+  &:before{
+    width: 60%;
+    bottom: 0;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    background: $white;
+  }
+  &:after{
+    width: 60%;
+    top: 0;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+    background: $white;
   }
 }

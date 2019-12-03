@@ -13,9 +13,6 @@
     top: 0;
     background: $primary_color;
     @extend %animate;
-    &.menu-open{
-      right: 0;
-    }
   }
   &__logo{
     width: 40px;
