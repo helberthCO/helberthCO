@@ -5,10 +5,8 @@
     content: 'Menu';
     position: relative;
     top: -1px;
-    font:{
-      size: em(14px);
-      weight: 600;
-    };
+    font-size: em(14px);
+    font-weight: 600;
     color: $primary_color;
     margin-left: 30px;
     text-transform: uppercase;
