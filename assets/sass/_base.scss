@@ -14,6 +14,12 @@ body{
     size: $browser-context;
   };
 }
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
 .btn{
   @extend %btn;
 }

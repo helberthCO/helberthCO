@@ -2,7 +2,6 @@
   position: relative;
   margin-left: 15px;
   &:before{
-    content: 'Menu';
     position: relative;
     top: -1px;
     font-size: em(14px);
@@ -68,33 +67,28 @@
   font-size: 1px;
   border-color: transparent;
 }
-
 #menu:checked ~ .header__nav{
   right: 0;
 }
-
 #menu:checked ~ .menu{
   z-index: 99;
   &:before{
-    content: 'Close';
     color: $white;
   }
 }
-
 #menu:checked ~ .menu span{
-  background: $white;
-  &:before{
-    width: 60%;
-    bottom: 0;
-    transform-origin: bottom left;
-    transform: rotate(45deg);
+  background: transparent;
+  &:before, &::after{
+    width: 100%;
+    transform-origin: center;
     background: $white;
   }
+  &:before{
+    bottom: 0;
+    transform: rotate(45deg);
+  }
   &:after{
-    width: 60%;
     top: 0;
-    transform-origin: top left;
     transform: rotate(-45deg);
-    background: $white;
   }
 }
