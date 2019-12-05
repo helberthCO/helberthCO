@@ -10,9 +10,13 @@ body{
   color: $black;
   font: {
     family: $primary_font;
-    weight: 400;
+    weight: 300;
     size: $browser-context;
   };
+}
+img{
+  display: block;
+  width: 100%;
 }
 a{
   text-decoration: none;
@@ -35,4 +39,27 @@ li{
 }
 .small-container{
   max-width: 1170px;
+}
+.mobile-container{
+  width: 90%;
+  margin: 0 auto;
+  @media all and (min-width: 700px){
+    width: 100%;
+  }
+}
+.main{
+  margin: 60px auto 0;
+}
+.global-title,
+.global-subtitle{
+  font: {
+    family: $secondary_font;
+    size: 8vw;
+  };
+  line-height: 8vw;
+  margin: em(10px) 0;
+  display: inline-block;
+  &__white{
+    color: $white;
+  }
 }
