@@ -55,6 +55,7 @@ html {
 body {
   position: relative;
   color: #222;
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 16px; }
@@ -203,7 +204,10 @@ li {
     font-weight: 500; }
     @media all and (min-width: 700px) {
       .primary-nav__link {
-        color: #222; } }
+        color: #222; }
+        .primary-nav__link:hover {
+          color: #00d49f;
+          transition: all 400ms ease-in-out; } }
 
 #menu {
   position: absolute;
@@ -242,8 +246,7 @@ li {
   background: #2F4858;
   margin: 100px 0;
   padding: 20px 0 80px;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .episodes__title {
     width: 100%; }
   .episodes::after, .episodes::before {
@@ -327,8 +330,7 @@ li {
   background: #2F4858;
   margin: 100px 0 0;
   padding: 20px 0;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   @media all and (min-width: 700px) {
     .listen {
       text-align: center; } }

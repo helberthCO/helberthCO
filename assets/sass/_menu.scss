@@ -68,6 +68,10 @@
     };
     @media all and (min-width: 700px){
       color: $black;
+      &:hover{
+        color: $primary_color;
+        transition: all 400ms ease-in-out;
+      }
     }
   }
 }
