@@ -19,7 +19,7 @@
         border-width: 50px 100vw 0 0;
         border-color: $secondary_color transparent transparent transparent;
     }
-    iframe:not(:last-of-type){
-        margin-bottom: 20px;
+    iframe{
+        margin-top: 10px;
     }
 }

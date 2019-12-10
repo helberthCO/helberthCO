@@ -230,12 +230,12 @@ li {
     top: 100%;
     border-width: 50px 100vw 0 0;
     border-color: #2F4858 transparent transparent transparent; }
-  .episodes iframe:not(:last-of-type) {
-    margin-bottom: 20px; }
+  .episodes iframe {
+    margin-top: 10px; }
 
 .history {
   position: relative;
-  margin-top: -150px; }
+  margin-top: -170px; }
 
 .team__title {
   width: 90%;
