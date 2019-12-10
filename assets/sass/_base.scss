@@ -59,6 +59,9 @@ li{
   line-height: 8vw;
   margin: em(10px) 0;
   display: inline-block;
+  @media all and (min-width: 700px){
+    font-size: 4vw;
+  }
   &__white{
     color: $white;
   }
