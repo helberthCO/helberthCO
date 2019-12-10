@@ -1,0 +1,25 @@
+.episodes{
+    background: $secondary_color;
+    margin: 100px 0;
+    padding: 20px 0 80px;
+    position: relative;
+    &::after, &::before{
+       @include pseudo($left:0);
+       width: 0;
+       height: 0;
+       border-style: solid;
+    }
+    &::before{
+        bottom: 100%;
+        border-width: 0 0 50px 100vw;
+        border-color: transparent transparent $secondary_color transparent;
+    }
+    &::after{
+        top: 100%;
+        border-width: 50px 100vw 0 0;
+        border-color: $secondary_color transparent transparent transparent;
+    }
+    iframe:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+}

@@ -33,11 +33,15 @@
   transition: all 400ms ease-in-out; }
 
 .btn {
-  padding: 7px 20px;
+  padding: 10px 30px;
+  display: block;
   background: #00d49f;
   color: #fff;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  margin: 20px 0;
+  max-width: 500px;
+  font-family: "Open Sans", sans-serif; }
   .btn:hover {
     background: #222; }
 
@@ -45,12 +49,25 @@
   margin: 0;
   padding: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   position: relative;
   color: #222;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px; }
+
+img {
+  display: block;
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
 
 .wrapper, .container, .small-container {
   width: 100%;
@@ -65,22 +82,42 @@ body {
 .small-container {
   max-width: 1170px; }
 
+.mobile-container {
+  width: 90%;
+  margin: 0 auto; }
+  @media all and (min-width: 700px) {
+    .mobile-container {
+      width: 100%; } }
+
+.main {
+  margin: 60px auto 0; }
+
+.global-title,
+.global-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 8vw;
+  line-height: 8vw;
+  margin: 0.625em 0;
+  display: inline-block; }
+  .global-title__white,
+  .global-subtitle__white {
+    color: #fff; }
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 99;
-  box-shadow: 0 0 8px 0 rgba(34, 34, 34, 0.25); }
+  box-shadow: 0 0 8px 0 rgba(34, 34, 34, 0.25);
+  background: #fff; }
   .header__nav {
     position: absolute;
     width: 100vw;
     height: 100vh;
     right: 100%;
     top: 0;
-    background: #00d49f; }
-    .header__nav.menu-open {
-      right: 0; }
+    background: #2F4858; }
   .header__logo {
     width: 40px;
     height: 40px;
@@ -90,13 +127,12 @@ body {
   position: relative;
   margin-left: 15px; }
   .menu:before {
-    content: 'Menu';
     position: relative;
     top: -1px;
-    font-size: .8rem;
+    font-size: 0.875em;
     font-weight: 600;
     color: #00d49f;
-    margin-left: 25px;
+    margin-left: 30px;
     text-transform: uppercase; }
   .menu__bars {
     position: absolute;
@@ -105,37 +141,25 @@ body {
     bottom: 0;
     margin: auto;
     display: block;
-    width: 20px;
-    height: 2px;
-    background: #00d49f; }
+    width: 25px;
+    height: 3px;
+    background: #00d49f;
+    border-radius: 2px; }
     .menu__bars:before, .menu__bars:after {
       content: '';
       position: absolute;
       display: block;
       left: 0;
       margin: auto;
-      width: 20px;
-      height: 2px;
+      width: 25px;
+      height: 3px;
       background: #00d49f;
-      transform-origin: left; }
+      transform-origin: left;
+      border-radius: 2px; }
     .menu__bars:before {
-      bottom: 5px; }
+      bottom: 7px; }
     .menu__bars:after {
-      top: 5px; }
-  .menu.menu-open {
-    z-index: 2; }
-    .menu.menu-open:before {
-      content: 'Close';
-      color: #fff; }
-    .menu.menu-open .menu__bars {
-      width: 0;
-      background: #fff; }
-      .menu.menu-open .menu__bars:before {
-        transform: rotate(32deg);
-        background: #fff; }
-      .menu.menu-open .menu__bars:after {
-        transform: rotate(-32deg);
-        background: #fff; }
+      top: 7px; }
 
 .primary-nav {
   width: 100%;
@@ -150,5 +174,128 @@ body {
     padding: 5px;
     text-decoration: none;
     font-weight: 500; }
+
+#menu {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 1px;
+  border-color: transparent; }
+
+#menu:checked ~ .header__nav {
+  right: 0; }
+
+#menu:checked ~ .menu {
+  z-index: 99; }
+  #menu:checked ~ .menu:before {
+    color: #fff; }
+
+#menu:checked ~ .menu span {
+  background: transparent; }
+  #menu:checked ~ .menu span:before, #menu:checked ~ .menu span::after {
+    width: 100%;
+    transform-origin: center;
+    background: #fff; }
+  #menu:checked ~ .menu span:before {
+    bottom: 0;
+    transform: rotate(45deg); }
+  #menu:checked ~ .menu span:after {
+    top: 0;
+    transform: rotate(-45deg); }
+
+.intro {
+  padding-top: 30px; }
+
+.episodes {
+  background: #2F4858;
+  margin: 100px 0;
+  padding: 20px 0 80px;
+  position: relative; }
+  .episodes::after, .episodes::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-style: solid; }
+  .episodes::before {
+    bottom: 100%;
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #2F4858 transparent; }
+  .episodes::after {
+    top: 100%;
+    border-width: 50px 100vw 0 0;
+    border-color: #2F4858 transparent transparent transparent; }
+  .episodes iframe:not(:last-of-type) {
+    margin-bottom: 20px; }
+
+.history {
+  position: relative;
+  margin-top: -150px; }
+
+.team__title {
+  width: 90%;
+  display: block;
+  margin: 50px auto 10px; }
+.team__member img {
+  filter: grayscale(1); }
+
+.stats__title {
+  margin: 50px auto 10px; }
+.stats__item {
+  text-align: center;
+  margin-top: 20px; }
+  .stats__item figure {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    overflow: hidden; }
+  .stats__item img {
+    height: 100%;
+    width: auto; }
+  .stats__item span, .stats__item strong {
+    display: block; }
+  .stats__item:nth-child(2) img {
+    margin-left: -70px; }
+  .stats__item:nth-child(3) img {
+    margin-left: -140px; }
+  .stats__item:nth-child(4) img {
+    margin-left: -210px; }
+
+.listen {
+  background: #2F4858;
+  margin: 100px 0 0;
+  padding: 20px 0;
+  position: relative; }
+  .listen__title {
+    color: #fff; }
+  .listen::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: 100%;
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #2F4858 transparent; }
+
+.footer {
+  padding: 30px 0 20px;
+  text-align: center; }
+  .footer__social {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 20px; }
+    .footer__social li {
+      margin: 5px; }
+    .footer__social i {
+      color: #2F4858; }
 
 /*# sourceMappingURL=styles.css.map */
