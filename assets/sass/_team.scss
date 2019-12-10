@@ -1,0 +1,12 @@
+.team{
+    &__title{
+        width: 90%;
+        display: block;
+        margin: 50px auto 10px;
+    }
+    &__member{
+        img{
+            filter: grayscale(1);
+        }
+    }
+}

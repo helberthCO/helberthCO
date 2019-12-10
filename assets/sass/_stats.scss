@@ -1,0 +1,31 @@
+.stats{
+    &__title{
+        margin: 50px auto 10px;
+    }
+    &__item{
+        text-align: center;
+        margin-top: 20px;
+        figure{
+            margin: auto;
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+        }
+        img{
+            height: 100%;
+            width: auto;
+        }
+        span, strong{
+            display: block;
+        }
+        &:nth-child(2) img{
+            margin-left: -70px;
+        }
+        &:nth-child(3) img{
+            margin-left: -140px;
+        }
+        &:nth-child(4) img{
+            margin-left: -210px;
+        }
+    }
+}
