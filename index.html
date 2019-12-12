@@ -6,9 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Podcast Project</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto:300,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800%7CRoboto:300,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body> 
@@ -33,30 +33,32 @@
         <a href="/" class="header__logo"><img src="assets/images/logo.svg" alt="PodCast Logo"></a>
     </header>
     <main class="main">
-        <section class="intro mobile-container" id="intro">
+        <section class="intro mobile-container small-container" id="intro">
             <h1 class="global-title">Android Authority Podcast</h1>
             <p class="intro__text">Adam Doud, Joe Hindy, and Jonathan Feist bring you all the most important stories in Android from the past seven days. Plus, we take deep dives into topics that you care about – like reviews of important devices, interviews with industry leaders, and special guest appearances. You won’t want to miss it.</p>
             <a href="https://www.androidauthority.com/podcast/" class="btn intro__btn" target="_blank" aria-label="Learn More About Android Authority Podcast">Learn More</a>
         </section>
         <section class="episodes" id="episodes">
-            <div class="mobile-container">
+            <div class="mobile-container small-container flex-main flex-wrap justify-content-space-between">
                 <h2 class="global-subtitle global-subtitle__white episodes__title">Episodes</h2>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/2VkAWaw4kqW2eAVGHi4Rf2" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/7BJvfrRpEq62bFKQdidM2Z" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/2jDigdUs8rNdQzf3G7EnxB" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/5kBnlVbY8GDrLCaeGuZhIb" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/2VkAWaw4kqW2eAVGHi4Rf2"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/7BJvfrRpEq62bFKQdidM2Z"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/2jDigdUs8rNdQzf3G7EnxB"></iframe>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/5kBnlVbY8GDrLCaeGuZhIb"></iframe>
             </div>
         </section>
-        <section class="history mobile-container" id="history">
+        <section class="history mobile-container small-container flex-main" id="history">
             <figure class="history__image">
                 <img src="assets/images/phone.png" alt="PodCast Page Mockup" class="history__image">
             </figure>
-            <h2 class="global-subtitle history__title">Our History</h2>
-            <p class="history__text">At Android Authority, we've had our eyes locked to the mobile landscape ever since 2007. From our humble beginnings as a microscopic but passionate team, we've grown into one of the most respected voices in tech reporting. Our commitment to quality and editorial integrity make us the go-to resource for Android fans the world over, but the site hasn't always looked like it currently does. Click here to take a walk down memory lane and see how the site has changed through the years.</p>
+            <div class="history__content">
+                <h2 class="global-subtitle history__title">Our History</h2>
+                <p class="history__text">At Android Authority, we've had our eyes locked to the mobile landscape ever since 2007. From our humble beginnings as a microscopic but passionate team, we've grown into one of the most respected voices in tech reporting. Our commitment to quality and editorial integrity make us the go-to resource for Android fans the world over, but the site hasn't always looked like it currently does. Click here to take a walk down memory lane and see how the site has changed through the years.</p>
+            </div>
         </section>
         <section class="team" id="team">
-            <h2 class="global-subtitle">Meet the podcast team</h2>
-            <div class="team__integrants">
+            <h2 class="team__title global-subtitle">Meet the podcast team</h2>
+            <div class="team__integrants flex-main flex-wrap">
                 <figure class="team__member">
                     <img src="assets/images/adam.jpg" alt="Adam Doud">
                 </figure>
@@ -68,8 +70,8 @@
                 </figure>
             </div>
         </section>
-        <section class="stats mobile-container" id="stats">
-            <h2 class="global-subtitle">Some of our stats</h2>
+        <section class="stats mobile-container small-container" id="stats">
+            <h2 class="stats__title global-subtitle">Some of our stats</h2>
             <div class="stats__container">
                 <div class="stats__item">
                     <figure><img src="assets/images/badges.png" alt="Stats Icon"></figure>
@@ -90,20 +92,20 @@
             </div>
         </section>
         <section class="listen" id="listen">
-            <div class="mobile-container">
+            <div class="mobile-container small-container">
                 <h2 class="global-subtitle listen__title">Your source for all things Android!</h2>
             <a href="https://open.spotify.com/show/30yZF9lA2Z4NhIuhKK1uxf?si=mJRQwO3mS_ueNF_7dmA1Lg" class="btn listen__btn" target="_blank" aria-label="Listen Now The Android Authority Podcast">Listen Now</a>
             </div>
         </section>
     </main>
-    <footer class="footer mobile-container">
+    <footer class="footer mobile-container small-container justify-content-center align-items-center">
         <p class="footer__rights">©2019 Android Authority | All Rights Reserved.</p>
         <ul class="footer__social">
-            <li><a href="https://www.facebook.com/androidauthority" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/androidauth" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com/androidauthority" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/channel/UCgyqtNWZmIxTx3b6OxTSALw?sub_confirmation=1" target="_blank">Youtube</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.androidauthority.app" target="_blank">PlayStore</a></li>
+            <li><a href="https://www.facebook.com/androidauthority" target="_blank"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="https://twitter.com/androidauth" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a></li>
+            <li><a href="https://www.instagram.com/androidauthority" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCgyqtNWZmIxTx3b6OxTSALw?sub_confirmation=1" target="_blank"><i class="fab fa-youtube-square fa-lg"></i></a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.androidauthority.app" target="_blank"><i class="fab fa-google-play fa-lg"></i></a></li>
         </ul>
     </footer>
     <!-- <script src="assets/js/scripts.min.js"></script> -->

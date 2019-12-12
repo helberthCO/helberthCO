@@ -6,6 +6,9 @@
   z-index: 99;
   box-shadow: 0 0 8px 0 rgba($black, .25);
   background: $white;
+  @media all and (min-width: 700px){
+    flex-direction: row-reverse;
+  }
   &__nav{
     position: absolute;
     width: 100vw;
@@ -14,10 +17,20 @@
     top: 0;
     background: $secondary_color;
     @extend %animate;
+    @media all and (min-width: 700px){
+      background: transparent;
+      position: unset;
+      height: unset;
+      width: unset;
+      margin-right: 100px;
+    }
   }
   &__logo{
     width: 40px;
     height: 40px;
     padding: 10px;
+    @media all and (min-width: 700px){
+      margin-left: 100px;
+    }
   }
 }

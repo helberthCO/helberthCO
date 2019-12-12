@@ -1,0 +1,21 @@
+.listen{
+    background: $secondary_color;
+    margin: 100px 0 0;
+    padding: 20px 0;
+    position: relative;
+    @media all and (min-width: 700px){
+        text-align: center;
+    }
+    &__title{
+        color: $white;
+    }
+    &::before{
+        @include pseudo($left:0);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        bottom: 100%;
+        border-width: 0 0 50px 100vw;
+        border-color: transparent transparent $secondary_color transparent;
+    }
+}

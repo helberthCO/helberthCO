@@ -1,0 +1,17 @@
+.history{
+    position: relative;
+    margin-top: -170px;
+    flex-wrap: wrap;
+    &__content{
+        @media all and (min-width: 700px){
+           width: 60%;
+           padding: 5%;
+           margin-top: 5%;
+        }
+    }
+    img{
+        @media all and (min-width: 700px){
+            width: 300px;
+        }
+    }
+}

@@ -8,6 +8,7 @@ html{
 body{
   position: relative;
   color: $black;
+  overflow-x: hidden;
   font: {
     family: $primary_font;
     weight: 300;
@@ -59,6 +60,9 @@ li{
   line-height: 8vw;
   margin: em(10px) 0;
   display: inline-block;
+  @media all and (min-width: 700px){
+    font-size: 4vw;
+  }
   &__white{
     color: $white;
   }
